@@ -1,0 +1,85 @@
+.item-small-parent{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  width:100%;
+  height: 220rpx
+
+}
+.item-small{
+  width: 31%;
+  height: 70rpx;
+  text-align: center;
+  line-height: 70rpx;
+  border: 2rpx solid #ededed
+}
+.item-big-parent{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  width:100%;
+  height: 100%
+
+}
+.item-big{
+  width: 31%;
+  height: 220rpx;
+  text-align: center;
+  border: 2rpx solid #ededed
+}
+.root{
+  width:100%;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+.item{
+  width:79rpx;
+  height: 79rpx;
+  border: 1rpx solid #ededed;
+  text-align: center;
+  line-height: 80rpx;
+}
+.border-left{
+  width: 100%;
+  height: 100%;
+  border-left: 1rpx solid #888888
+}
+.border-top{
+  width: 100%;
+  height:100%;
+  border-top: 1rpx solid #888888
+}
+.num-choose-dialog{
+  position: fixed;
+  width: 300rpx;
+  height: 300rpx;
+  background-color: rgba(0,0, 0,1);
+  margin: 30%;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  z-index: 999;
+  text-align: center
+}
+.hidden{
+  display: none;
+}
+.num-choose-dialog-item{
+  height: 100rpx;
+  width: 100rpx;
+  color: white;
+  line-height: 100rpx;
+}
+.origin{
+  background-color: #ededed
+}
+.clear-input{
+  width: 100%;
+  height: 100rpx;
+  background-color: rgba(0,0, 0,1);
+  color: white;
+  line-height: 100rpx
+
+}
+

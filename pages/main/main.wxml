@@ -1,0 +1,40 @@
+<view class="root">
+  <view class="item" bindtap= "onClick" wx:for="{{viewArrays}}" data-id="{{index}}">
+    <view class ="border-left" wx:if="{{index%3==0&&index%9!=0}}">
+       <view class ="border-top" wx:if="{{(index/9>=3&&index/9<4)||(index/9>=6&&index/9<7)}}">
+        <view class="origin" wx:if="{{item.isOriginNum==1}}">
+        {{item.num}}
+        </view>
+        <view wx:else>{{item.num==0?'':item.num}}</view>
+       </view>
+      <view wx:else>
+        <view class="origin" wx:if="{{item.isOriginNum==1}}">
+        {{item.num}}
+        </view>
+        <view wx:else >{{item.num==0?'':item.num}}</view>
+      </view>
+    </view>
+    <view wx:else>
+      <view class ="border-top" wx:if="{{(index/9>=3&&index/9<4)||(index/9>=6&&index/9<7)}}">
+        <view class="origin" wx:if="{{item.isOriginNum==1}}">
+        {{item.num}}
+        </view>
+        <view wx:else>{{item.num==0?'':item.num}}</view>
+      </view>
+    <view wx:else>
+      <view class="origin" wx:if="{{item.isOriginNum==1}}">
+        {{item.num}}
+        </view>
+        <view wx:else>{{item.num==0?'':item.num}}</view>
+    </view>
+    </view>
+  </view>
+
+  <!--//号码选择框-->
+  <view class="{{showChooseNumDialog?'num-choose-dialog':'hidden'}}">
+    <view bindtap="chooseNum" data-id="{{index+1}}" class="num-choose-dialog-item" wx:for="{{[1,2,3,4,5,6,7,8,9]}}">{{item}}
+    </view>
+    <view class="clear-input" bindtap="clearInput">清除
+    </view>
+  </view>
+</view>
