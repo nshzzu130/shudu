@@ -5,6 +5,7 @@ Page({
    * 页面的初始数据
    */
   data: {
+    animationData:{},
     clickindex:0,
     level:1,
     type:0,
