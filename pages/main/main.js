@@ -7,6 +7,7 @@ Page({
   data: {
     clickindex:0,
     level:1,
+    type:0,
     viewArrays:[],
     showChooseNumDialog:false
   },
@@ -156,7 +157,7 @@ Page({
         if(res.confirm){//进入下一关
           wx.setStorageSync('level', that.data.level+1)
           wx.redirectTo({
-            url: '/pages/main/main',
+            url: '/pages/main/main?id='+that.data.type,
           })
         }else{
 
@@ -183,8 +184,14 @@ Page({
     wx.setNavigationBarTitle({
       title: '第' + this.data.level + '关',
     })
-
-    let array=data.getdata(this.data.level)
+    let array=new Array();
+    if(options.id==1){
+      this.data.type=1;
+      array = data.getDataForChildren(this.data.level)
+    }else{
+      this.data.type=2;
+      array = data.getData(this.data.level)
+    }
     for (let i = 0; i < array.length;i++){
       this.data.viewArrays[i]=new Object();
       this.data.viewArrays[i].num = array[i];

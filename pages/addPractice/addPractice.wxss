@@ -1,0 +1,27 @@
+.item-add-practice{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  width: 100%;
+}
+.item-add-item{
+  width: 40%;
+  height: 60rpx;
+  margin: 0rpx 20rpx;
+  text-align: right;
+  line-height: 60rpx;
+  font-size: 50rpx
+}
+.item-sum{
+  background-color: #ededed;
+  font-size: 50rpx;
+  width:100rpx
+}
+.item-result{
+  width: 60rpx;
+  height: 50rpx;
+  margin-left: 40rpx;
+}
+.hide{
+  display: none
+}

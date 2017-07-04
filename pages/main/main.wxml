@@ -21,13 +21,13 @@
         </view>
         <view wx:else>{{item.num==0?'':item.num}}</view>
       </view>
-    <view wx:else>
-      <view class="origin" wx:if="{{item.isOriginNum==1}}">
+      <view wx:else>
+        <view class="origin" wx:if="{{item.isOriginNum==1}}">
         {{item.num}}
         </view>
         <view wx:else>{{item.num==0?'':item.num}}</view>
-    </view>
-    </view>
+      </view>
+     </view>
   </view>
 
   <!--//号码选择框-->

@@ -1,0 +1,5 @@
+<view class="item-add-practice" wx:for="{{total}}">
+  <view class ="item-add-item">{{add1[index]}}+{{add2[index]}}=</view>
+  <input class="item-sum" type="number" bindinput="checkResult"  data-index="{{index}}"></input>
+  <image class="{{showRight[index]==true?'item-result':'hide'}}" src="right.png"></image>
+</view>

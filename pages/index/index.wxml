@@ -1,10 +1,12 @@
 <!--index.wxml-->
 <view class="container">
-  <view  bindtap="bindViewTap" class="userinfo">
+  <view class="userinfo">
     <image class="userinfo-avatar" src="{{userInfo.avatarUrl}}" background-size="cover"></image>
     <text class="userinfo-nickname">{{userInfo.nickName}}</text>
   </view>
-  <view class="usermotto" catchtap="toMain">
-    <text class="user-motto">{{motto}}</text>
+  <view class="usermotto">
+    <text class="item" catchtap="childrenEnter">{{childrenTitle}}</text>
+    <text class="item" catchtap="addPractice">加法训练</text>
+    <text class="item" catchtap="commonEnter">{{manTitle}}</text>
   </view>
 </view>

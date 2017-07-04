@@ -3,7 +3,8 @@
 var app = getApp()
 Page({
   data: {
-    motto: 'Hello World',
+    childrenTitle: '幼儿学习',
+    manTitle:'成人难度',
     userInfo: {}
   },
   //事件处理函数
@@ -12,9 +13,19 @@ Page({
       url: '../logs/logs'
     })
   },
-  toMain:function(){
+  commonEnter:function(){
     wx.navigateTo({
       url: '../main/main',
+    })
+  },
+  addPractice:function(){
+    wx.navigateTo({
+      url: '../addPractice/addPractice',
+    })
+  },
+  childrenEnter:function(){
+    wx.navigateTo({
+      url: '../main/main?id=1',
     })
   },
   onLoad: function () {
